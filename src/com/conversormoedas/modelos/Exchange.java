@@ -15,6 +15,6 @@ public class Exchange {
 
     @Override
     public String toString() {
-        return "Resultado da conversão: " + result + "\nMoeda base: " + baseCode + "\nMoeda alvo: " + targetCode + "\nValor da conversão: " + conversionResult;
+        return "Resultado da conversão: " + result + "\n\nMoeda base: " + baseCode + "\nMoeda alvo: " + targetCode + "\n\nValor da conversão: " + conversionResult;
     }
 }

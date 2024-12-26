@@ -11,10 +11,14 @@ public class ConversionRates {
         this.result = taxasConversaoApi.result();
         this.baseCode = taxasConversaoApi.base_code();
         this.conversionRates = taxasConversaoApi.conversion_rates();
+        for (Map.Entry<String, Double> entry : conversionRates.entrySet()) {
+            System.out.println("\n" + entry.getKey() + ": " + entry.getValue());
+        }
+
     }
 
     @Override
     public String toString() {
-        return "Resultado da requisição: " + result + "\nMoeda base: " + baseCode + "\nTaxas de conversão:\n" + conversionRates;
+        return "\nMoeda base: " + baseCode;
     }
 }
