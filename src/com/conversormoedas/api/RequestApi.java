@@ -6,6 +6,7 @@ import com.conversormoedas.modelos.Exchange;
 import com.conversormoedas.modelos.ExchangeApi;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import io.github.cdimascio.dotenv.Dotenv;
 
 import java.net.URI;
 import java.net.URL;
@@ -14,6 +15,8 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class RequestApi {
+    private static final Dotenv dotenv = Dotenv.load();
+    private static final String apiKey = dotenv.get("KEY");
 
     public static Exchange converterMoeda(String moedaASerConvertida, String moedaConverter, Double valorParaConverter) {
         String dados = moedaASerConvertida + "/" + moedaConverter + "/" + valorParaConverter;
@@ -35,7 +38,7 @@ public class RequestApi {
 
     private static String response(String metodo, String dados) {
         try {
-            String urlString = "https://v6.exchangerate-api.com/v6/" + API_KEY + "/" + metodo + "/" + dados;
+            String urlString = "https://v6.exchangerate-api.com/v6/" + apiKey + "/" + metodo + "/" + dados;
             URL url = new URL(urlString);
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()

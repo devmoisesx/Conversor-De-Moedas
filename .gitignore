@@ -15,6 +15,7 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 config.env
+.env
 
 ### NetBeans ###
 /nbproject/private/
