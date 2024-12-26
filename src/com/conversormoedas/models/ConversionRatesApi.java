@@ -1,4 +1,4 @@
-package com.conversormoedas.modelos;
+package com.conversormoedas.models;
 
 import java.util.Map;
 

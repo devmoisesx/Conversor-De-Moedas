@@ -1,10 +1,9 @@
-package com.conversormoedas.modelos;
+package com.conversormoedas.models;
 
 import java.util.Map;
 
 public class ConversionRates {
-    private String result;
-    private String baseCode;
+    private String result, baseCode;
     private Map<String, Double> conversionRates;
 
     public ConversionRates(ConversionRatesApi taxasConversaoApi) {
@@ -12,7 +11,7 @@ public class ConversionRates {
         this.baseCode = taxasConversaoApi.base_code();
         this.conversionRates = taxasConversaoApi.conversion_rates();
         for (Map.Entry<String, Double> entry : conversionRates.entrySet()) {
-            System.out.println("\n" + entry.getKey() + ": " + entry.getValue());
+            System.out.println(entry.getKey() + ": " + entry.getValue());
         }
 
     }

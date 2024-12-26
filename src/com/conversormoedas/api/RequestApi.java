@@ -1,9 +1,9 @@
 package com.conversormoedas.api;
 
-import com.conversormoedas.modelos.ConversionRates;
-import com.conversormoedas.modelos.ConversionRatesApi;
-import com.conversormoedas.modelos.Exchange;
-import com.conversormoedas.modelos.ExchangeApi;
+import com.conversormoedas.models.ConversionRates;
+import com.conversormoedas.models.ConversionRatesApi;
+import com.conversormoedas.models.Exchange;
+import com.conversormoedas.models.ExchangeApi;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import io.github.cdimascio.dotenv.Dotenv;
